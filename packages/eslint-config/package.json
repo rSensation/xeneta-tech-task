@@ -1,0 +1,12 @@
+{
+  "name": "@xeneta/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared eslint config",
+  "exports": {
+    ".": "./base.json",
+    "./*": "./*.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
