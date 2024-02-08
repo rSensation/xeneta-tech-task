@@ -13,14 +13,33 @@
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "unused-imports", "import"],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": {
     "semi": [2, "always"],
     "import/order": [
       2,
       {
         "newlines-between": "always",
-        "warnOnUnassignedImports": true
+        "warnOnUnassignedImports": true,
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling"],
+          "index",
+          "object"
+        ],
+        "pathGroups": [
+          { "pattern": "react", "group": "external", "position": "before" },
+          { "pattern": "./types", "group": "internal", "position": "before" },
+          { "pattern": "../**", "group": "parent", "position": "before" },
+          { "pattern": "./**.scss", "group": "index", "position": "after" },
+          { "pattern": "./**.css", "group": "index", "position": "after" }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "distinctGroup": false,
+        "alphabetize": {
+          "order": "asc"
+        }
       }
     ],
     "@typescript-eslint/no-unused-vars": [1, { "argsIgnorePattern": "^_" }]
