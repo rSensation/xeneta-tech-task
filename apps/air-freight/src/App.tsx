@@ -1,11 +1,7 @@
-import './App.css';
+import Chart from './components/Chart';
 
 function App() {
-  return (
-    <>
-      <div>Test</div>
-    </>
-  );
+  return <Chart />;
 }
 
 export default App;
