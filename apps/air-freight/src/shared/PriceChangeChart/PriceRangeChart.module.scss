@@ -1,0 +1,23 @@
+.price_range{
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__dropdowns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__dropdown {
+    width: 200px;
+  }
+
+  &__chart {
+    flex-grow: 1;
+    height: 300px;
+  }
+}

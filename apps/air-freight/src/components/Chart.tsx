@@ -1,6 +1,6 @@
-import PriceChangeChart from '../shared/PriceChangeChart';
+import { useEffect, useState } from 'react';
 
-import classes from './Chart.module.scss';
+import PriceChangeChart from '../shared/PriceChangeChart';
 
 const data = [
   {
@@ -47,11 +47,52 @@ const data = [
   },
 ];
 
-const Chart = () => (
-  <PriceChangeChart
-    data={data}
-    chartContainerClassName={classes.chart_container}
-  />
-);
+const locations = [
+  {
+    value: 'JFK',
+    label: 'New York',
+  },
+  {
+    value: 'JFK1',
+    label: 'New York1',
+  },
+  {
+    value: 'JFK2',
+    label: 'New York2',
+  },
+  {
+    value: 'JFK3',
+    label: 'New York3',
+  },
+];
+
+const Chart = () => {
+  const [origin, setOrigin] = useState<string>();
+  const [destination, setDestination] = useState<string>();
+
+  useEffect(
+    () => console.log(`${origin}-${destination}`),
+    [origin, destination]
+  );
+
+  // const origins = useMemo(
+  //   () => locations.filter(({ value }) => value !== destination),
+  //   [destination]
+  // );
+  // const destinations = useMemo(
+  //   () => locations.filter(({ value }) => value !== origin),
+  //   [origin]
+  // );
+
+  return (
+    <PriceChangeChart
+      origins={locations}
+      setOrigin={setOrigin}
+      destinations={locations}
+      setDestination={setDestination}
+      data={data}
+    />
+  );
+};
 
 export default Chart;
