@@ -19,5 +19,5 @@ export const getAxisDomain = ([dataMin, dataMax]: number[]): [number, number] =>
   const diff = dataMax - dataMin;
   const min = dataMin - diff;
   const max = dataMax + diff;
-  return [min - (min % 20), max + 20 - (max % 20)];
+  return [(min - (min % 20)) || 0, (max + 20 - (max % 20)) || 0];
 };

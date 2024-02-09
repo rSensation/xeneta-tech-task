@@ -66,6 +66,24 @@ const locations = [
   },
 ];
 
+const lines = [
+  {
+    id: 'low',
+    label: 'Market Low',
+    color: '#87CEEB'
+  },
+  {
+    id: 'mean',
+    label: 'Market Average',
+    color: '#FFA500'
+  },
+  {
+    id: 'high',
+    label: 'Market High',
+    color: '#006400'
+  },
+];
+
 const Chart = () => {
   const [origin, setOrigin] = useState<string>();
   const [destination, setDestination] = useState<string>();
@@ -91,6 +109,7 @@ const Chart = () => {
       destinations={locations}
       setDestination={setDestination}
       data={data}
+      lines={lines}
     />
   );
 };
