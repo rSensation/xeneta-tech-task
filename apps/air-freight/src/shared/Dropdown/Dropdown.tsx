@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import Select from 'react-select';
 
-export interface Option {
-  value: string;
-  label: string;
-}
+import { Option } from './types';
+
+import { components, styles, theme } from './customStyles';
 
 interface DropdownProps {
   className?: string;
@@ -20,6 +19,9 @@ const Dropdown: FC<DropdownProps> = ({ className, options, onChange }) => {
       className={className}
       options={options}
       onChange={setValueOnChange}
+      components={components}
+      theme={theme}
+      styles={styles}
     />
   );
 };

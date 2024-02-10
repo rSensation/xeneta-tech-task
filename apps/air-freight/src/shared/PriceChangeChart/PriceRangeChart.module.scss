@@ -1,15 +1,17 @@
+@import '../styles/variables.scss';
+
 .price_range{
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: $basic-margin;
   }
 
   &__dropdowns {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: $sm-margin;
   }
 
   &__dropdown {

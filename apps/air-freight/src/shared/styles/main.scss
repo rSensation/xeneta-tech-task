@@ -1,3 +1,6 @@
+@import './variables.scss';
+
+/* reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,7 +21,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -42,8 +44,44 @@ table {
 	border-spacing: 0;
 }
 
+/* css variables */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --primary-color: #{$primary-color};
+  --primary-color-light: #{$primary-color-light};
+  --primary-color-lighter: #{$primary-color-lighter};
+  --bg-color: #{$bg-color};
+  --bg-color-light: #{$bg-color-light};
+  --text-color: #{$text-color};
+  --text-color-white: #{$text-color-white};
+}
+
+/* shared styles */
+:root {
+  font-family: sans-serif;
+  font-size: 12px;
   font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.7;
+}
+h1{
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
 }

@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+@mixin sm-screen() {
+  @media (min-width: $sm-min-width) {
+    @content;
+  }
+}
+
+@mixin md-screen() {
+  @media (min-width: $md-min-width) {
+    @content;
+  }
+}
+
+@mixin lg-screen() {
+  @media (min-width: $lg-min-width) {
+    @content;
+  }
+}

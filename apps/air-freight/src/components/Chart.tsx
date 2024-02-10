@@ -70,17 +70,17 @@ const lines = [
   {
     id: 'low',
     label: 'Market Low',
-    color: '#87CEEB'
+    color: '#CEA438'
   },
   {
     id: 'mean',
     label: 'Market Average',
-    color: '#FFA500'
+    color: '#BF96FF'
   },
   {
     id: 'high',
     label: 'Market High',
-    color: '#006400'
+    color: '#63D9B6'
   },
 ];
 

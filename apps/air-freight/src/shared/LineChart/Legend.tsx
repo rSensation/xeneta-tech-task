@@ -14,7 +14,7 @@ interface LegendProps {
 const Legend: FC<LegendProps> = ({ items, active, onClick }) => (
   <div className={classes.legend__container}>
     <h5>Market Position</h5>
-    <ul>
+    <ul className={classes.legend__list}>
       {items?.map(({ id, label, color }) => (
         <li
           key={id}
