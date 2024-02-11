@@ -1,0 +1,8 @@
+@import '@xeneta/styles/variables';
+
+.header {
+  padding: $sm-margin;
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
+  text-align: center;
+}
