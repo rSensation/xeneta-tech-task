@@ -1,0 +1,17 @@
+{
+  "name": "@xeneta/styles",
+  "version": "1.0.0",
+  "description": "Shared styles",
+  "type": "module",
+  "exports": {
+    ".": "./dist/main.css",
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.1.0"
+  }
+}

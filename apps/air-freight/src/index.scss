@@ -1,5 +1,12 @@
-@import './shared/styles/variables.scss';
-@import './shared/styles/main.scss';
+@import '@xeneta/styles/variables';
+@import '@xeneta/styles/main';
+
+:root {
+	--primary-color: #771DFF;
+	--primary-color-light: #D1B3FF;
+	--primary-color-lighter: #F0E6FF;
+	--text-color: #1F1926;
+}
 
 body {
 	margin: $basic-margin;
