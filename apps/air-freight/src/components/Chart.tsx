@@ -1,70 +1,9 @@
-import { useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
-import PriceChangeChart from '../shared/PriceChangeChart';
-
-const data = [
-  {
-    day: new Date('2023-01-01').valueOf(),
-    mean: 910,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-08').valueOf(),
-    mean: 915,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-10').valueOf(),
-    mean: 910,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-12').valueOf(),
-    mean: 907,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-15').valueOf(),
-    mean: 918,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-16').valueOf(),
-    mean: 917,
-    low: 850,
-    high: 1020,
-  },
-  {
-    day: new Date('2023-01-24').valueOf(),
-    mean: 917,
-    low: 850,
-    high: 1020,
-  },
-];
-
-const locations = [
-  {
-    value: 'JFK',
-    label: 'New York',
-  },
-  {
-    value: 'JFK1',
-    label: 'New York1',
-  },
-  {
-    value: 'JFK2',
-    label: 'New York2',
-  },
-  {
-    value: 'JFK3',
-    label: 'New York3',
-  },
-];
+import { fetchAllRates } from '../api';
+import { Option } from '../shared/components/Dropdown';
+import PriceChangeChart from '../shared/components/PriceChangeChart';
+import useCacheLoader from '../shared/hooks/useCacheLoader';
 
 const lines = [
   {
@@ -84,29 +23,32 @@ const lines = [
   },
 ];
 
-const Chart = () => {
+interface ChartProps {
+  airports: Option[];
+}
+
+const Chart: FC<ChartProps> = ({ airports }) => {
   const [origin, setOrigin] = useState<string>();
   const [destination, setDestination] = useState<string>();
+  
+  const getRatesByLocations = async () => {
+    if (!origin || !destination || origin === destination) {
+      return;
+    }
 
-  useEffect(
-    () => console.log(`${origin}-${destination}`),
-    [origin, destination]
-  );
-
-  // const origins = useMemo(
-  //   () => locations.filter(({ value }) => value !== destination),
-  //   [destination]
-  // );
-  // const destinations = useMemo(
-  //   () => locations.filter(({ value }) => value !== origin),
-  //   [origin]
-  // );
+    const response = await fetchAllRates(origin, destination);
+    return response.map(({ day, ...rates }) => ({
+      ...rates,
+      day: new Date(day).valueOf(),
+    }));
+  };
+  const data = useCacheLoader(getRatesByLocations, `${origin}-${destination}`);
 
   return (
     <PriceChangeChart
-      origins={locations}
+      origins={airports}
       setOrigin={setOrigin}
-      destinations={locations}
+      destinations={airports}
       setDestination={setDestination}
       data={data}
       lines={lines}

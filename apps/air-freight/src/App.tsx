@@ -1,11 +1,11 @@
-import Chart from './components/Chart';
-import Header from './shared/Header';
+import Content from './components/Content';
+import Header from './shared/components/Header';
 
 function App() {
   return (
     <>
       <Header title="Air Freight" />
-      <main><Chart /></main>
+      <main><Content /></main>
     </>
   );
 }

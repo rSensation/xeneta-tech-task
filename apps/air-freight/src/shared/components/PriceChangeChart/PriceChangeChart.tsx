@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
 import { Option } from '../Dropdown';
-import Chart, { LineItem } from '../LineChart';
+import LineChart, { LineChartData, LineItem } from '../LineChart';
 import TradeLaneDropdowns from './TradeLaneDropdowns';
 
 import classes from './PriceRangeChart.module.scss';
 
 interface PriceRangeChartProps {
-  data?: Record<string, number>[];
+  data?: LineChartData[];
   origins?: Option[];
   setOrigin?: (newValue?: string) => void;
   destinations?: Option[];
@@ -31,7 +31,7 @@ const PriceChangeChart: FC<PriceRangeChartProps> = ({
       setDestination={setDestination}
     />
     <div className={classes.price_range__chart}>
-      <Chart data={data} lines={lines} />
+      <LineChart data={data} lines={lines} />
     </div>
   </div>
 );

@@ -12,9 +12,16 @@ export interface LineItem {
   label?: string;
 }
 
+export interface LineChartData {
+  day: number;
+  low: number;
+  mean: number;
+  high: number;
+}
+
 export interface CommonChartProps {
   lines: LineItem[];
-  data?: Record<string, number>[];
+  data?: LineChartData[];
   gridProps?: CartesianGridProps;
   xAxisPpops?: XAxisProps;
   yAxisProps?: YAxisProps;
