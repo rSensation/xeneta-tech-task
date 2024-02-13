@@ -19,16 +19,10 @@
   },
   "dependencies": {
     "@xeneta/styles": "workspace:*",
-    "classnames": "^2.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-select": "^5.8.0",
     "recharts": "^2.11.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react": "^4.2.1",
     "@xeneta/eslint-config": "workspace:*",
     "vite-plugin-css-injected-by-js": "^3.4.0",
     "vite-plugin-dts": "^3.7.2"
