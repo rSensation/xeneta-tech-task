@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
+import { LoaderScreen, DropdownOption } from '@xeneta/common/components';
 
 import { fetchAllAirports } from '../api';
-import { Option } from '../shared/components/Dropdown';
-import LoaderScreen from '../shared/components/LoaderScreen';
 import Chart from './Chart';
 
 function Content() {
-  const [airports, setAirports] = useState<Option[] | undefined>();
+  const [airports, setAirports] = useState<DropdownOption[] | undefined>();
 
   const getAirports = async () => {
     const response = await fetchAllAirports();

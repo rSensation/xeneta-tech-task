@@ -1,9 +1,8 @@
 import { FC, useState } from 'react';
+import { PriceRangeChart, DropdownOption } from '@xeneta/common/components';
+import { useCacheLoader } from '@xeneta/common/hooks';
 
 import { fetchAllRates } from '../api';
-import { Option } from '../shared/components/Dropdown';
-import PriceChangeChart from '../shared/components/PriceChangeChart';
-import useCacheLoader from '../shared/hooks/useCacheLoader';
 
 const lines = [
   {
@@ -24,7 +23,7 @@ const lines = [
 ];
 
 interface ChartProps {
-  airports: Option[];
+  airports: DropdownOption[];
 }
 
 const Chart: FC<ChartProps> = ({ airports }) => {
@@ -45,7 +44,7 @@ const Chart: FC<ChartProps> = ({ airports }) => {
   const data = useCacheLoader(getRatesByLocations, `${origin}-${destination}`);
 
   return (
-    <PriceChangeChart
+    <PriceRangeChart
       origins={airports}
       setOrigin={setOrigin}
       destinations={airports}

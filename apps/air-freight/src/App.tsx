@@ -1,5 +1,6 @@
+import { Header } from '@xeneta/common/components';
+
 import Content from './components/Content';
-import Header from './shared/components/Header';
 
 function App() {
   return (

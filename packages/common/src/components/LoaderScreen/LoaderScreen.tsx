@@ -1,4 +1,4 @@
-import Loader from '../Icons/Loader';
+import { Loader } from '../Icons';
 
 import classes from './LoaderScreen.module.scss';
 
