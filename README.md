@@ -27,6 +27,14 @@ VITE_API_KEY=<API_key>
 - run `pnpm dev:ocean` from the root folder
 - or navigate to the `apps/ocean-freight` folder and run `pnpm dev`
 
+## How to build
+
+Run corresponding build task:
+-`pnpm build:air` for air-freight
+-`pnpm build:ocean` for ocean-freight
+
+Or navigate to the app's folder and run `pnpm build`
+
 ## Tools
 
 1. For monorepo structure management, I used _pnpm_ knowing that it's a perfect tool for that and to get more familiar with it.

@@ -8,7 +8,9 @@
     "lint": "pnpm -r lint",
     "format": "prettier --write .",
     "build:packages": "pnpm -F ./packages/** build",
+    "build:air": "pnpm -F air-freight build",
     "dev:air": "pnpm -F air-freight dev",
+    "build:ocean": "pnpm -F ocean-freight build",
     "dev:ocean": "pnpm -F ocean-freight dev"
   },
   "keywords": [],
