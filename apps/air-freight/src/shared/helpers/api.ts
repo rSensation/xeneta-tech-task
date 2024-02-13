@@ -23,7 +23,7 @@ export const fetchFromApi = async (
  * Appends given query parameters to the url
  * @param url a string of the url
  * @param params query parameters as a string map
- * @returns 
+ * @returns the url with query parameters
  */
 export const getUrlWithQueryParams = (
   url: string,

@@ -9,17 +9,17 @@ const lines = [
   {
     id: 'low',
     label: 'Market Low',
-    color: '#CEA438'
+    color: '#CEA438',
   },
   {
     id: 'mean',
     label: 'Market Average',
-    color: '#BF96FF'
+    color: '#BF96FF',
   },
   {
     id: 'high',
     label: 'Market High',
-    color: '#63D9B6'
+    color: '#63D9B6',
   },
 ];
 
@@ -30,7 +30,7 @@ interface ChartProps {
 const Chart: FC<ChartProps> = ({ airports }) => {
   const [origin, setOrigin] = useState<string>();
   const [destination, setDestination] = useState<string>();
-  
+
   const getRatesByLocations = async () => {
     if (!origin || !destination || origin === destination) {
       return;

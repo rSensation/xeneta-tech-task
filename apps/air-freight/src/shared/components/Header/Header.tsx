@@ -7,9 +7,7 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ title }) => (
-  <div className={classes.header}>
-    {title && <h3>{title}</h3>}
-  </div>
+  <div className={classes.header}>{title && <h3>{title}</h3>}</div>
 );
 
 export default Header;

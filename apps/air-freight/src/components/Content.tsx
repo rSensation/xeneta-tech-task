@@ -10,14 +10,16 @@ function Content() {
 
   const getAirports = async () => {
     const response = await fetchAllAirports();
-    setAirports(response.map(({ code, name }) => ({
-      value: code,
-      label: name,
-    })));
+    setAirports(
+      response.map(({ code, name }) => ({
+        value: code,
+        label: name,
+      }))
+    );
   };
 
   useEffect(() => {
-      getAirports();
+    getAirports();
   }, []);
 
   if (!airports) {

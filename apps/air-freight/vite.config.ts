@@ -5,7 +5,7 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
-  return ({
+  return {
     plugins: [react()],
     server: {
       proxy: {
@@ -17,5 +17,5 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-  });
+  };
 });

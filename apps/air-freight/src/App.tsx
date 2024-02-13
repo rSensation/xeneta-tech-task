@@ -5,7 +5,9 @@ function App() {
   return (
     <>
       <Header title="Air Freight" />
-      <main><Content /></main>
+      <main>
+        <Content />
+      </main>
     </>
   );
 }

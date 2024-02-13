@@ -7,10 +7,7 @@ import Legend from './Legend';
 
 import classes from './LineChart.module.scss';
 
-const LineChart: FC<CommonChartProps> = ({
-  lines,
-  ...props
-}) => {
+const LineChart: FC<CommonChartProps> = ({ lines, ...props }) => {
   const [active, setActive] = useState<Record<string, boolean>>(
     lines.reduce((res, { id }) => ({ ...res, [id]: true }), {})
   );

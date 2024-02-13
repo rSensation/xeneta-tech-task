@@ -4,8 +4,8 @@ export interface AirportResponse {
 }
 
 export interface RateResponse {
-  day: string,
-  mean: number,
-  low: number,
-  high: number,
+  day: string;
+  mean: number;
+  low: number;
+  high: number;
 }

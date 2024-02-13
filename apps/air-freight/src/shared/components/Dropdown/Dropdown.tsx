@@ -12,7 +12,12 @@ interface DropdownProps {
   onChange?: (newValue?: string) => void;
 }
 
-const Dropdown: FC<DropdownProps> = ({ className, options, placeholder, onChange }) => {
+const Dropdown: FC<DropdownProps> = ({
+  className,
+  options,
+  placeholder,
+  onChange,
+}) => {
   const setValueOnChange = (option: Option | null) => onChange?.(option?.value);
 
   return (
