@@ -12,7 +12,7 @@ You can lint each package/app individually by navigating to its folder and runni
 2. Run `pnpm build:packages` to build all shared packages
 3. To run any app, you need to edit **.env** in apps folder (apps/air-freight or apps/ocean-freight). I didn't include values in the repo to avoid leaking the API key and as a general best practice:
 
-```console
+```bash
 VITE_API_URL=<API_url>
 VITE_API_KEY=<API_key>
 ```
