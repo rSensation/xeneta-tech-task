@@ -1,4 +1,4 @@
-import { CSSObjectWithLabel, Theme } from 'react-select';
+import { StylesConfig, Theme } from 'react-select';
 
 export const components = {
   IndicatorSeparator: null,
@@ -15,12 +15,12 @@ export const theme = (theme: Theme) => ({
   },
 });
 
-export const styles = {
-  control: (baseStyles: CSSObjectWithLabel) => ({
+export const styles: StylesConfig = {
+  control: (baseStyles) => ({
     ...baseStyles,
     minHeight: 'unset',
   }),
-  dropdownIndicator: (baseStyles: CSSObjectWithLabel) => ({
+  dropdownIndicator: (baseStyles) => ({
     ...baseStyles,
     padding: '6px 8px',
   }),
