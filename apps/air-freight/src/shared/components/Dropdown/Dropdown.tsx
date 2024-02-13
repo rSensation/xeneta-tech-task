@@ -8,10 +8,11 @@ import { components, styles, theme } from './customStyles';
 interface DropdownProps {
   className?: string;
   options?: Option[];
+  placeholder?: string;
   onChange?: (newValue?: string) => void;
 }
 
-const Dropdown: FC<DropdownProps> = ({ className, options, onChange }) => {
+const Dropdown: FC<DropdownProps> = ({ className, options, placeholder, onChange }) => {
   const setValueOnChange = (option: Option | null) => onChange?.(option?.value);
 
   return (
@@ -22,6 +23,7 @@ const Dropdown: FC<DropdownProps> = ({ className, options, onChange }) => {
       components={components}
       theme={theme}
       styles={styles}
+      placeholder={placeholder}
     />
   );
 };

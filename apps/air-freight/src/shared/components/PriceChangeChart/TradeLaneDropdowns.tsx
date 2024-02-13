@@ -23,12 +23,14 @@ const TradeLaneDropdowns: FC<TradeLaneDropdownsProps> = ({
       className={classes.price_range__dropdown}
       options={origins}
       onChange={setOrigin}
+      placeholder="Select origin"
     />
     <ExchangeIcon />
     <Dropdown
       className={classes.price_range__dropdown}
       options={destinations}
       onChange={setDestination}
+      placeholder="Select destination"
     />
   </div>
 );
