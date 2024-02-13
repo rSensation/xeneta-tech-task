@@ -80,6 +80,19 @@ importers:
         specifier: workspace:*
         version: link:../../packages/eslint-config
 
+  apps/ocean-freight:
+    dependencies:
+      '@xeneta/common':
+        specifier: workspace:*
+        version: link:../../packages/common
+      '@xeneta/styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
+    devDependencies:
+      '@xeneta/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+
   packages/common:
     dependencies:
       '@xeneta/styles':

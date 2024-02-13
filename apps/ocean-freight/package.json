@@ -1,0 +1,19 @@
+{
+  "name": "@xeneta/ocean-freight",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@xeneta/common": "workspace:*",
+    "@xeneta/styles": "workspace:*"
+  },
+  "devDependencies": {
+    "@xeneta/eslint-config": "workspace:*"
+  }
+}

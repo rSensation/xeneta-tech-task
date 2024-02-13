@@ -1,0 +1,3 @@
+{
+  "extends": ["@xeneta/eslint-config/react"]
+}

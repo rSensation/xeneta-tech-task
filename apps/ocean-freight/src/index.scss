@@ -1,0 +1,13 @@
+@import '@xeneta/styles/variables';
+@import '@xeneta/styles/main';
+
+:root {
+  --primary-color: #135dff;
+  --primary-color-light: #99b9ff;
+  --primary-color-lighter: #e6eeff;
+  --text-color: #1b1a28;
+}
+
+main {
+  margin: $basic-margin;
+}

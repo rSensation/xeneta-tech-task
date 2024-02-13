@@ -18,7 +18,8 @@ const Dropdown: FC<DropdownProps> = ({
   placeholder,
   onChange,
 }) => {
-  const setValueOnChange = (option: unknown) => onChange?.((option as Option)?.value);
+  const setValueOnChange = (option: unknown) =>
+    onChange?.((option as Option)?.value);
 
   return (
     <Select
