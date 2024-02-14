@@ -33,4 +33,10 @@ export const createFetchFromApi =
 export const getUrlWithQueryParams = (
   url: string,
   params?: Record<string, string>
-) => `${url}?${new URLSearchParams(params)}`;
+) => {
+  const queryParams = new URLSearchParams(params);
+  if (!queryParams.size) {
+    return url;
+  }
+  return `${url}?${queryParams}`;
+};

@@ -11,6 +11,7 @@ pnpm build
 ```
 
 This will generate the 3 files:
+
 - `components.js` containing shared React component
 - `helpers` containing helper functions
 - `hooks` containing reusable React hooks
@@ -28,6 +29,7 @@ import * from '@xeneta/common/hooks';
 ## Components
 
 The library has the following reusable components:
+
 - Dropdown
 - ExchangeIcon
 - LineChart
@@ -39,10 +41,12 @@ The library has the following reusable components:
 ## Helpers
 
 The library has the following helper function:
+
 - createFetchFromApi
 - getUrlWithQueryParams
 
 ## Hooks
 
 The library has the following reusable hooks:
+
 - useCacheLoader

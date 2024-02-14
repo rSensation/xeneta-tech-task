@@ -16,6 +16,6 @@ To run:
 
 ```bash
 pnpm dev
-``` 
+```
 
 More details in the root folder's README.md file

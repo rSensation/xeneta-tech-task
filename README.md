@@ -29,9 +29,7 @@ VITE_API_KEY=<API_key>
 
 ## How to build
 
-Run corresponding build task:
--`pnpm build:air` for air-freight
--`pnpm build:ocean` for ocean-freight
+Run corresponding build task: -`pnpm build:air` for air-freight -`pnpm build:ocean` for ocean-freight
 
 Or navigate to the app's folder and run `pnpm build`
 
@@ -41,6 +39,7 @@ Or navigate to the app's folder and run `pnpm build`
 2. For build, I used _vite_, because it is easy to set up and powerful at the same time.
 3. For charts, I used _recharts_ because it was simple, easy to use and good enough for this demonstration. If I had to choose something for a bigger project, I would prefer more powerful and customizable libraries like _d3.js_ or _echarts_.
 4. For data flow, I used local state to keep it simple. For a bigger project, I would prefer _Redux Toolkit_.
+5. For tests, I used _Vitest_ and _React Testing Library_: they both quite powerful and easy to use when it comes to testing React code with Vite builder. I only covered **packages/common** subproject just for the demo purpose, but it could be easily set up for other projects as well.
 
 ## Data Flow
 
