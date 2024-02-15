@@ -17,5 +17,9 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    preview: {
+      host: true,
+      port: 8000,
+    }
   };
 });

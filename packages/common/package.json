@@ -24,9 +24,12 @@
     "recharts": "^2.11.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
     "@xeneta/eslint-config": "workspace:*",
     "react-select-event": "^5.5.1",
+    "vite": "^5.1.1",
     "vite-plugin-css-injected-by-js": "^3.4.0",
-    "vite-plugin-dts": "^3.7.2"
+    "vite-plugin-dts": "^3.7.2",
+    "vitest": "^1.2.2"
   }
 }

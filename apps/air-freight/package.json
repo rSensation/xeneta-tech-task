@@ -14,6 +14,8 @@
     "@xeneta/styles": "workspace:*"
   },
   "devDependencies": {
-    "@xeneta/eslint-config": "workspace:*"
+    "@vitejs/plugin-react": "^4.2.1",
+    "@xeneta/eslint-config": "workspace:*",
+    "vite": "^5.1.1"
   }
 }
