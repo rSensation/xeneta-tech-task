@@ -4,19 +4,14 @@ A small prototype to showcase 2 products structured, developed and maintained as
 
 ## Prerequisites
 
-To run this code, you need the latest Node js installed with pnpm functionality turned on. To run docker example, you would need Docker Desktop installed.
+To run this code, you need:
 
-## Lint
-
-You can lint each package/app individually by navigating to its folder and running:
-```sh
-pnpm lint
-```
-Alternativelly, you can run `pnpm lint` from the root folder to lint all the packages/apps at once.
+- Node.js v18 an higher
+- Docker Desktop (only if you want to run a Docker example)
 
 ## How to run
 
-From the root folder, run:
+From the root folder, install dependencies:
 ```sh
 pnpm i
 ```
@@ -26,7 +21,7 @@ Then build all shared packages:
 pnpm build:packages
 ```
 
-To run any app, you need to edit **.env** file in app's folder (apps/air-freight or apps/ocean-freight). I didn't include values in the repo to avoid leaking the API key and as a general best practice:
+To run any app, you need to edit **.env** file in the app's folder (_apps/air-freight_ or _apps/ocean-freight_). I didn't include values in the repo to avoid leaking the API key and as a general best practice:
 ```sh
 VITE_API_URL=<API_url>
 VITE_API_KEY=<API_key>
@@ -52,9 +47,17 @@ pnpm build:air
 pnpm build:ocean
 ```
 
+## Lint
+
+You can lint each package/app individually by navigating to its folder and running:
+```sh
+pnpm lint
+```
+Alternativelly, you can run `pnpm lint` from the root folder to lint all the packages/apps at once.
+
 ## Docker
 
-There is an example of conainerization with Docker for Air Freight project. To run the production preview of the project:
+There is an example of containerization with Docker for Air Freight project. To run the production preview of the project:
 ```sh
 docker build . -f ./apps/air-freight/Dockerfile -t "air-freight"
 docker run -p 8000:8000 air-freight
@@ -68,7 +71,7 @@ The example uses Vite's _preview_ functionality to check your production build q
 2. For build, I used _vite_, because it is easy to set up and powerful at the same time.
 3. For charts, I used _recharts_ because it was simple, easy to use and good enough for this demonstration. If I had to choose something for a bigger project, I would prefer more powerful and customizable libraries like _d3.js_ or _echarts_.
 4. For data flow, I used local state to keep it simple. For a bigger project, I would prefer _Redux Toolkit_.
-5. For tests, I used _Vitest_ and _React Testing Library_: they both quite powerful and easy to use when it comes to testing React code with Vite builder. I only covered **packages/common** subproject just for the demo purpose, but it could be easily set up for other projects as well. To run tests, navigate to packages/common folder and run:
+5. For tests, I used _Vitest_ and _React Testing Library_: they both quite powerful and easy to use when it comes to testing React code with Vite builder. I only covered **packages/common** subproject just for the demo purposes, but it could be easily set up for other projects as well. To run tests, navigate to _packages/common_ folder and run:
 ```sh
 pnpm test
 ```
